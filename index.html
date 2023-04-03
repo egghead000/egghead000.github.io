@@ -1,12 +1,19 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>Page Title</title>
-</head>
-<body>
-
-<h1>This is a Heading</h1>
-<p>This is a paragraph.</p>
-
-</body>
+  <head>
+    <title>Current Time</title>
+  </head>
+  <body>
+    <h1>Current Time:</h1>
+    <p>
+      The current time is:
+      <strong>
+        <?php
+          from datetime import datetime
+          now = datetime.now()
+          print(now.strftime("%H:%M:%S"))
+        ?>
+      </strong>
+    </p>
+  </body>
 </html>
